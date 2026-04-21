@@ -112,17 +112,10 @@ publishMods {
         projectId = property("publish.modrinth") as String
         accessToken = env.MODRINTH_API_KEY.orNull()
         minecraftVersions.addAll(supportedMinecraftVersions)
-        optional("cloth-config")
-        optional("forge-config-api-port")
-        optional("fabric-api")
     }
 
     curseforge {
         projectId = property("publish.curseforge") as String
         accessToken = env.CURSEFORGE_API_KEY.orNull()
-        minecraftVersions.addAll(supportedMinecraftVersions)
-        optional("cloth-config")
-        optional("forge-config-api-port")
-        optional("fabric-api")
     }
 }

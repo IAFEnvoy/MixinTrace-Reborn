@@ -22,3 +22,6 @@ side = "BOTH"
 modId = "minecraft"
 type = "required"
 versionRange = "${minecraft_version_range_neoforge}"
+
+[[mixins]]
+config = "${mod_id}.mixins.json"

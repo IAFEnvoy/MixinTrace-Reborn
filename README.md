@@ -1,22 +1,30 @@
-# Stonecutter Template
+# MixinTrace
 
-This is a multi-loader mod template for Fabric, Forge and NeoForge
+This is a fork and continuation version of MixinTrace
+([CurseForge](https://www.curseforge.com/minecraft/mc-mods/mixintrace) | [Modrinth](https://modrinth.com/mod/mixintrace)),
+a mod that can print all mixins applied to a class in the stacktrace when a crash happens. It is very useful for mod
+developers to find out which mods are applying mixins to the class in the stacktrace, and it can also be used by players
+to report mod conflicts.
 
-## Supported versions
+This fork add support for 26.1+ which no longer use obfuscated names, and also add support for Forge and Neoforge.
 
-- Fabric 1.14+
-- Forge 1.17+
-- NeoForge 1.20.5+
+**Note: Mod logically support all versions of Minecraft, if you find any incompatibility issues please report.**
 
-## Before Use
+## Example output
 
-- Configure your project's metadata in `gradle.properties`.
-- If you want to use mixins, uncomment mixin processors in `build.forge.gradle.kts`, create mixin files and add to
-  `fabric.mod.json` and `neoforge.mods.toml`
+### 1.21.11- on Forge / Fabric
 
-## Useful Links
+```
+Mixins in Stacktrace: 
+    net.minecraft.class_465:
+        com.example.examplemod.mixin.ExampleMixin (examplemod.mixins.json)
+Notice: In Forge and Fabric 1.21.11-, Minecraft running in obfuscate mode. 
+    You may need to use some tools to find out the exact class name.
+```
+### 26.1+ / NeoForge
 
-- Stonecutter docs: https://stonecutter.kikugie.dev/
-- Versions select guideline: https://stonecutter.kikugie.dev/wiki/start/#version-compatibility
-- Ceres (Fast dependencies search): https://ceres.mcdev.tech/
-- Parchment versions index: https://parchmentmc.org/docs/getting-started
+```
+Mixins in Stacktrace: 
+    net.minecraft.client.gui.screens.inventory.AbstractContainerScreen:
+        com.example.examplemod.mixin.ExampleMixin (examplemod.mixins.json)
+```
