@@ -1,4 +1,4 @@
-# MixinTrace
+# MixinTrace Reborn
 
 This is a fork and continuation version of MixinTrace
 ([CurseForge](https://www.curseforge.com/minecraft/mc-mods/mixintrace) | [Modrinth](https://modrinth.com/mod/mixintrace)),
