@@ -54,10 +54,10 @@ public final class TraceUtils {
                 }
 
                 if (!found) crashReportBuilder.append(" None found");
-                    //? <=1.21.11 && !neoforge {
-                else
-                    crashReportBuilder.append("\nNotice: In Forge and Fabric 1.21.11-, Minecraft running in obfuscate mode.\n\tYou may need to use some tools to find out the exact class name.");
-                //?}
+                //? <=1.21.11 && !neoforge {
+                /*else
+                    crashReportBuilder.append("\nMinecraft running in obfuscate mode. You may need to use some tools to find out the exact class name.");
+                *///?}
             } catch (Exception e) {
                 crashReportBuilder.append(" Failed to find Mixin metadata: ").append(e);
             }

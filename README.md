@@ -18,9 +18,9 @@ This fork add support for 26.1+ which no longer use obfuscated names, and also a
 Mixins in Stacktrace: 
     net.minecraft.class_465:
         com.example.examplemod.mixin.ExampleMixin (examplemod.mixins.json)
-Notice: In Forge and Fabric 1.21.11-, Minecraft running in obfuscate mode. 
-    You may need to use some tools to find out the exact class name.
+Notice: Minecraft running in obfuscate mode. You may need to use some tools to find out the exact class name.
 ```
+
 ### 26.1+ / NeoForge
 
 ```
